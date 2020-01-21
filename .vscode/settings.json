@@ -1,0 +1,13 @@
+{
+    "sqltools.connections": [
+        {
+            "askForPassword": false,
+            "database": "booking",
+            "dialect": "MySQL",
+            "name": "booking",
+            "port": 3306,
+            "server": "localhost",
+            "username": "root"
+        }
+    ]
+}
