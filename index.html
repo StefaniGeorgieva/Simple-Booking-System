@@ -5,39 +5,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="solution.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-
-    <title>Table Booking</title>
+    <title>Restaurant Booking System</title>
 </head>
 
 <body>
-    <main>
-        <h2>Reservation System</h2>
-        <form id="form" name="form">
-            <div>
+    <div class="container">
+        <h2>Reservation System <i class="fas fa-utensils" style="color: grey;"></i></h2>
 
-                <label>Table number:</label>
-                <input type="number" id="tableNumber" min="1" max="5" step="1">
-                </br>
+        <form id="form">
 
-                <label>Number of people:</label>
-                <input type="number" id="people" min="1" max="6" step="1">
-                </br>
+            <label>Table number:</label>
+            <input type="number" id="tableNum" min="1" max="5" step="1">
+            </br>
 
-                <label>Date:</label>
-                <input type="date" id="date">
-                </br>
+            <label>Number of people:</label>
+            <input type="number" id="people" min="1" max="6" step="1">
+            </br>
 
-                <label>Time:</label>
-                <input type="time" id="time">
-                </br>
+            <label>Date:</label>
+            <input type="date" id="date">
+            </br>
 
-                <input type="button" id="submit" onclick="solution()" value="Submit">
-            </div>
+            <label>Time:</label>
+            <input type="time" id="time">
+            </br>
+
+            <input type="submit" value="Make a reservation">
         </form>
-    </main>
-</body>
+        </br>
 
+        <table>
+            <thead>
+                <tr>
+                    <th> Table Number </th>
+                    <th> Number of people </th>
+                    <th> Date </th>
+                    <th> Time </th>
+                </tr>
+            </thead>
+
+            <tbody id="list">
+
+            </tbody>
+        </table>
+
+    </div>
+
+    <script src="solution.js"></script>
+</body>
 </html>
