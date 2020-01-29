@@ -9,10 +9,11 @@ class Reservation {
 
 class Info {
     static displayInformation() {
-        let info = [];
 
-        let reservation = info;
+        let reservation = Store.getInfo();
+
         reservation.forEach((e) => Info.addInformation(e));
+
     }
 
     static addInformation(e) {
@@ -35,6 +36,28 @@ class Info {
         document.getElementById('date').value = '';
         document.getElementById('time').value = '';
     }
+
+}
+
+class Store {
+    static getInfo() {
+        let arr;
+
+        if (localStorage.getItem('information') === null) {
+            arr = [];
+        } else {
+            arr = JSON.parse(localStorage.getItem('information'));
+        }
+
+        return arr;
+    }
+
+    static addInfo(i) {
+        let array = Store.getInfo();
+
+        array.push(i);
+        localStorage.setItem('information', JSON.stringify(array));
+    }
 }
 
 //Display info:
@@ -55,11 +78,24 @@ document.getElementById("form").addEventListener('submit', function (ev) {
     if (table === '' || people === '' ||
         date === '' || time === '') {
 
-        alert('Please, fill in all fields');
+        alert('Please fill in all fields');
+
     } else {
         let reservation = new Reservation(table, people, date, time);
 
         Info.addInformation(reservation);
+
+        Store.addInfo(reservation);
+
         Info.clearField();
     }
 });
+
+//Disable past days 
+
+let today = new Date().toISOString().split('T')[0];
+document.getElementsByName("date")[0].setAttribute('min', today);
+
+
+
+
