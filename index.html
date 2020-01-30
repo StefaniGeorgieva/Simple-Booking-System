@@ -13,16 +13,17 @@
 
 <body>
     <div class="container">
+
         <h2>Reservation System <i class="fas fa-utensils" style="color: grey;"></i></h2>
 
         <form id="form">
 
             <label>Table number:</label>
-            <input type="number" id="tableNum" min="1" max="5" step="1">
+            <input type="number" id="tableNum" min="1" max="5" step="1" placeholder="Select table from 1 to 5">
             </br>
 
-            <label>Number of people:</label>
-            <input type="number" id="people" min="1" max="6" step="1">
+            <label>Seats:</label>
+            <input type="number" id="people" min="1" max="6" step="1" placeholder="Select seats from 1 to 6">
             </br>
 
             <label>Date:</label>
@@ -30,20 +31,20 @@
             </br>
 
             <label>Time:</label>
-            <input type="time" id="time">
+            <input type="time" id="time" min="09:00" max="23:00">
             </br>
 
-            <input type="submit" value="Make a reservation">
+            <input type="submit" id="btn" value="Make a reservation">
         </form>
         </br>
 
         <table>
             <thead>
                 <tr>
-                    <th> Table Number </th>
-                    <th> Number of people </th>
-                    <th> Date </th>
-                    <th> Time </th>
+                    <th>Table Number</th>
+                    <th>Seats</th>
+                    <th>Date</th>
+                    <th>Time</th>
                 </tr>
             </thead>
 

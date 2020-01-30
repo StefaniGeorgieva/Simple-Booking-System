@@ -1,34 +1,45 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-* {
-    font-family: Arial, Helvetica, sans-serif;
-}
-body {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    min-height: 100vh;
-    flex-wrap: wrap;
-    padding-top: 2.5em;
-}
-
-
 html {
-    background-image: url('background.png');
-    background-size: cover;
-    height: 100vh;
+    background-color: rgba(236, 217, 200, 0.883);
+}
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    margin-top: 5em;
 }
 
 .container {
-    padding-top: 1.2em;
-    width: 100% auto;
-    height: 30vh;
-    margin: 0 auto;
+    max-width: 500px;
+    margin: 1.5em auto;
+    border: 0.3em solid rgb(131, 125, 125);
+    padding: 1.1em;
+    border-radius: 0.5em;
+
+    background-image: url('background.png');
+    background-size: cover;
 }
 
+label {
+    display: block;
+    padding: 1rem 0.25rem;
+    font-size: 15px;
+    font-weight: bold;
+}
 
+input {
+    width: 40%;
+    padding: 0.2em;
+    font-size: 14.5px;
+    border-radius: 0.1em;
+}
 
-
+#btn {
+    border: 0;
+    background: rgba(236, 217, 200, 0.883);
+    padding: 0.6em;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 1.2em 0;
+    width: 100% auto;
+}

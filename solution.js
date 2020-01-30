@@ -35,6 +35,7 @@ class Info {
         document.getElementById('people').value = '';
         document.getElementById('date').value = '';
         document.getElementById('time').value = '';
+
     }
 
 }
@@ -88,6 +89,7 @@ document.getElementById("form").addEventListener('submit', function (ev) {
         Store.addInfo(reservation);
 
         Info.clearField();
+
     }
 });
 
@@ -95,7 +97,3 @@ document.getElementById("form").addEventListener('submit', function (ev) {
 
 let today = new Date().toISOString().split('T')[0];
 document.getElementsByName("date")[0].setAttribute('min', today);
-
-
-
-
